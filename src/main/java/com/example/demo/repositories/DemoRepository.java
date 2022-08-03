@@ -7,68 +7,68 @@ import java.util.Map;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.entities.User;
+import com.example.demo.entities.Test;
 import com.example.demo.exceptions.BadRequestException;
 import com.example.demo.exceptions.NotFoundException;
-import com.example.demo.models.mappers.UserMapper;
-import com.example.demo.models.resources.UserResource;
+import com.example.demo.models.mappers.TestMapper;
+import com.example.demo.models.resources.TestResource;
 
 @Component
 public class DemoRepository extends Repository {
-    private static ArrayList<User> users = new ArrayList<User>();
+    private static ArrayList<Test> data = new ArrayList<Test>();
 
     static {
-        users.add(new User(1, "phich", "phich@gmail.com", "0123456789", "http://localhost:8081/avatar/phich.png", hash("p12345678")));
-        users.add(new User(2, "jhp phich", "jhphich@gmail.com", "1123456789", "http://localhost:8081/avatar/jhphich.png",hash("p12345678")));
-        users.add(new User(3, "phat", "phat@gmail.com", "2123456789", "http://localhost:8081/avatar/phat.png", hash("p12345678")));
+        data.add(new Test(1, "phich", "phich@gmail.com", "0123456789", "http://localhost:8081/avatar/phich.png", hash("p12345678")));
+        data.add(new Test(2, "jhp phich", "jhphich@gmail.com", "1123456789", "http://localhost:8081/avatar/jhphich.png",hash("p12345678")));
+        data.add(new Test(3, "phat", "phat@gmail.com", "2123456789", "http://localhost:8081/avatar/phat.png", hash("p12345678")));
     }
 
     private static String hash(String password) {
         return (new BCryptPasswordEncoder()).encode(password);
     }
 
-    public UserResource find(int id) {
-        for (User user: users) {
-            if (user.getId() == id) {
-                return UserMapper.toUserResource(user);
+    public TestResource find(int id) {
+        for (Test test: data) {
+            if (test.getId() == id) {
+                return TestMapper.toResource(test);
             }
         }
         return null;
     }
 
-    public UserResource findOrFailed(int id) {
-        for (User user: users) {
-            if (user.getId() == id) {
-                return UserMapper.toUserResource(user);
+    public TestResource findOrFailed(int id) {
+        for (Test test: data) {
+            if (test.getId() == id) {
+                return TestMapper.toResource(test);
             }
         }
         throw new NotFoundException();
     }
 
-    public List<UserResource> get() {
-        List<UserResource> userList = new ArrayList<UserResource>();
+    public List<TestResource> get() {
+        List<TestResource> records = new ArrayList<TestResource>();
 
-        for (User user: users) {
-            userList.add(UserMapper.toUserResource(user));
+        for (Test test: data) {
+            records.add(TestMapper.toResource(test));
         }
-        return userList;
+        return records;
     }
 
-    public UserResource getBy(int id) {
+    public TestResource getBy(int id) {
         return this.findOrFailed(id);
     }
 
-    public List<UserResource> search(String keyword) {
-        List<UserResource> userList = new ArrayList<>();
-        for (User user: users) {
-            if (user.getName().contains(keyword)) {
-                userList.add(UserMapper.toUserResource(user));
+    public List<TestResource> search(String keyword) {
+        List<TestResource> records = new ArrayList<>();
+        for (Test test: data) {
+            if (test.getName().contains(keyword)) {
+                records.add(TestMapper.toResource(test));
             }
         }
-        return userList;
+        return records;
     }
 
-    public UserResource store(Map<String, String> params) {
+    public TestResource store(Map<String, String> params) {
         String[] keys = {"name", "email", "phone", "avatar", "password", "confirmation_password"};
         // Validate keys
         for (String key : keys) {
@@ -80,38 +80,38 @@ public class DemoRepository extends Repository {
         if (!params.get("password").equals(params.get("confirmation_password"))) {
             throw new BadRequestException("Password and confirmation password are mismatch.");
         }
-        User user = new User(
-            users.size() + 1,
+        Test test = new Test(
+            data.size() + 1,
             params.get("name"),
             params.get("email"),
             params.get("phone"),
             params.get("avatar"),
             hash(params.get("password"))
         );
-        users.add(user);
-        return UserMapper.toUserResource(user);
+        data.add(test);
+        return TestMapper.toResource(test);
     }
 
     public boolean update(int id, Map<String, String> params) {
         // Validate user (exists)
         this.findOrFailed(id);
 
-        for (int i=0; i < users.size(); i++) {
-            User user = users.get(i);
-            if (user.getId() == id) {
+        for (int i=0; i < data.size(); i++) {
+            Test record = data.get(i);
+            if (record.getId() == id) {
                 if (params.containsKey("name")) {
-                    user.setName(params.get("name"));
+                    record.setName(params.get("name"));
                 }
                 if (params.containsKey("email")) {
-                    user.setEmail(params.get("email"));
+                    record.setEmail(params.get("email"));
                 }
                 if (params.containsKey("phone")) {
-                    user.setPhone(params.get("phone"));
+                    record.setPhone(params.get("phone"));
                 }
                 if (params.containsKey("avatar")) {
-                    user.setAvatar(params.get("avatar"));
+                    record.setAvatar(params.get("avatar"));
                 }
-                users.set(i, user);
+                data.set(i, record);
                 return true;
             }
         }
@@ -123,9 +123,9 @@ public class DemoRepository extends Repository {
         // Validate user (exists)
         this.findOrFailed(id);
 
-        for (int i=0; i < users.size(); i++) {
-            if (users.get(i).getId() == id) {
-                users.remove(i);
+        for (int i=0; i < data.size(); i++) {
+            if (data.get(i).getId() == id) {
+                data.remove(i);
                 return true;
             }
         }

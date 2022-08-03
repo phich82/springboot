@@ -1,11 +1,10 @@
 package com.example.demo.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpStatus;
 
 import com.example.demo.services.ErrorResponse;
 import com.example.demo.services.SuccessResponse;
+
 
 public abstract class ApiController {
 
@@ -33,15 +32,4 @@ public abstract class ApiController {
         return new ErrorResponse(message, status);
     }
 
-    // public Object service;
-
-    // protected abstract Class<?> getService();
-
-    // @Autowired
-    // protected ApplicationContext appContext;
-
-    // public ApiController() {
-    //     System.out.println("appContext xxx => " + this.appContext);
-    //     return this.appContext.getBean(this.getService());
-    // }
 }

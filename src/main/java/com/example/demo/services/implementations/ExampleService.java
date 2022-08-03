@@ -12,7 +12,7 @@ import com.example.demo.services.contracts.ServiceContract;
 
 
 @Component
-public class DemoService implements ServiceContract {
+public class ExampleService implements ServiceContract {
 
     @Autowired
     protected DemoRepository demoRepository;

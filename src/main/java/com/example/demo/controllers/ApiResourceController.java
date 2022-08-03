@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +14,7 @@ import com.example.demo.services.contracts.ServiceContract;
 
 public abstract class ApiResourceController extends ApiController {
 
-    public ServiceContract service;
+    protected ServiceContract service;
 
     /**
      * Constructor

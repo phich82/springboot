@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class User {
+public class Test {
     private int id;
     private String name;
     private String email;

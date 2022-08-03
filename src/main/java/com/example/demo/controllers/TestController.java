@@ -13,25 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.resources.UserResource;
+import com.example.demo.models.resources.TestResource;
 import com.example.demo.services.SuccessResponse;
 import com.example.demo.services.implementations.TestService;
 
-
-// @RestController
-// @RequestMapping("/tests")
-// public class TestController extends ApiResourceController {
-
-//     /**
-//      * Binding
-//      * @param TestService testService
-//      * @return void
-//      */
-//     @Autowired
-//     public TestController(TestService testService) {
-//         super(testService);
-//     }
-// }
 
 @RestController
 @RequestMapping("/tests")
@@ -42,25 +27,25 @@ public class TestController extends ApiController {
 
     @GetMapping("")
     public SuccessResponse index() {
-        List<UserResource> records = this.service.get();
+        List<TestResource> records = this.service.get();
         return this.successResponse(records);
     }
 
     @GetMapping("/{id}")
     public SuccessResponse show(@PathVariable int id) {
-        UserResource record = this.service.getBy(id);
+        TestResource record = this.service.getBy(id);
         return this.successResponse(record);
     }
 
     @GetMapping("/search")
     public SuccessResponse search(@RequestParam(name="keyword", required=false, defaultValue="") String name) {
-        List<UserResource> records = this.service.search(name);
+        List<TestResource> records = this.service.search(name);
         return this.successResponse(records);
     }
 
     @PostMapping("")
     public SuccessResponse create(@RequestParam Map<String, String> req) {
-        UserResource record = this.service.store(req);
+        TestResource record = this.service.store(req);
         return this.successResponse(record);
     }
 
