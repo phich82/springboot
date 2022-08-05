@@ -3,16 +3,19 @@ package com.example.demo.models.mappers;
 import com.example.demo.entities.Test;
 import com.example.demo.models.resources.TestResource;
 
+/**
+ * DTO (Data Transfer Object)
+ */
 public class TestMapper {
 
-    public static TestResource toResource(Test test) {
+    public static TestResource toResource(Test entity) {
         TestResource tmp = new TestResource();
 
-        tmp.setId(test.getId());
-        tmp.setName(test.getName());
-        tmp.setEmail(test.getEmail());
-        tmp.setPhone(test.getPhone());
-        tmp.setAvatar(test.getAvatar());
+        tmp.setId(entity.getId());
+        tmp.setName(entity.getName());
+        tmp.setEmail(entity.getEmail());
+        tmp.setPhone(entity.getPhone());
+        tmp.setAvatar(entity.getAvatar());
 
         return tmp;
     }

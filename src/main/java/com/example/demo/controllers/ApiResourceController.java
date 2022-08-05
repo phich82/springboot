@@ -41,7 +41,7 @@ public abstract class ApiResourceController extends ApiController {
     // }
 
     @PostMapping("")
-    public SuccessResponse create(@RequestParam Map<String, String> req) {
+    public SuccessResponse store(@RequestParam Map<String, String> req) {
         return this.successResponse(this.service.store(req));
     }
 

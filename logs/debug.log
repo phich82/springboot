@@ -1,0 +1,7 @@
+2022-08-06 00:11:15 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 38807 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-06 00:11:15 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-06 00:11:15 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-06 00:11:20 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 5.887 seconds (JVM running for 7.351)
+2022-08-06 00:11:44 [http-nio-8081-exec-1] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.
+2022-08-06 00:12:04 [http-nio-8081-exec-4] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.
+2022-08-06 00:12:08 [http-nio-8081-exec-6] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.

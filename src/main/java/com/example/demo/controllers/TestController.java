@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.resources.TestResource;
+import com.example.demo.requests.StoreTestRequest;
+import com.example.demo.services.Logger;
 import com.example.demo.services.SuccessResponse;
 import com.example.demo.services.implementations.TestService;
 
@@ -27,6 +31,7 @@ public class TestController extends ApiController {
 
     @GetMapping("")
     public SuccessResponse index() {
+        Logger.info("This is error message for test.", this);
         List<TestResource> records = this.service.get();
         return this.successResponse(records);
     }
@@ -44,7 +49,7 @@ public class TestController extends ApiController {
     }
 
     @PostMapping("")
-    public SuccessResponse create(@RequestParam Map<String, String> req) {
+    public SuccessResponse store(@RequestParam Map<String, String> req, @Valid StoreTestRequest storeTestRequest) {
         TestResource record = this.service.store(req);
         return this.successResponse(record);
     }

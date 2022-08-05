@@ -1,22 +1,22 @@
-package com.example.demo.models.resources;
+package com.example.demo.models;
+
+import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-/**
- * Domain Model
- */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TestResource {
+// @Component
+public class Test {
     private int id;
     private String name;
     private String email;
     private String phone;
     private String avatar;
+    private String password;
 }
