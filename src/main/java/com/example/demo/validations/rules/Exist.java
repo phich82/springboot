@@ -10,27 +10,28 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
 
 /**
- * ElementType.TYPE: only apply for class level
+ * Apply for values (METHOD, FIELD, ANNOTATION_TYPE, PARAMETER)
  */
-@Constraint(validatedBy = FieldsValueMatchValidator.class)
-@Target({TYPE, ANNOTATION_TYPE})
+@Constraint(validatedBy = ExistValidator.class)
+@Target({METHOD, FIELD, ANNOTATION_TYPE, PARAMETER})
 @Retention(RUNTIME)
 @Documented
-public @interface FieldsValueMatch {
-    public String message() default "Fields values don\'t match!";
+public @interface Exist {
+    public String message() default "Field value doesn't exist!";
 
-    String field();
-
-    String fieldMatch();
+    /** Table column name in database */
+    String field() default "id";
+    /** Table name */
+    String table();
 
     //represents group of constraints
     public Class<?>[] groups() default {};
     //represents additional information about annotation
     public Class<? extends Payload>[] payload() default {};
 
-    @Target({TYPE, ANNOTATION_TYPE})
+    @Target({METHOD, FIELD, ANNOTATION_TYPE, PARAMETER})
     @Retention(RUNTIME)
     @interface List {
-        FieldsValueMatch[] value();
+        Exist[] value();
     }
 }

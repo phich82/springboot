@@ -13,38 +13,13 @@ import static java.lang.annotation.RetentionPolicy.*;
 @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy=MaxValidator.class)
-public @interface Max {
+@Constraint(validatedBy=RequiredValidator.class)
+public @interface Required {
     //error message
-    public String message() default "The field must be lower than the maximum value.";
-
-    /**
-	 * @return value the element must be lower or equal to
-	 */
-	long value();
-
-	/**
-	 * Can be string or number or list
-	 *
-	 * Specify the data type for field. Default: string
-	 */
-	String[] onlyfor() default {"string", "numeric", "list"};
+    public String message() default "The field is required.";
 
     //represents group of constraints
     public Class<?>[] groups() default {};
     //represents additional information about annotation
     public Class<? extends Payload>[] payload() default {};
-
-    /**
-	 * Defines several {@link Min} annotations on the same element.
-	 *
-	 * @see Min
-	 */
-	@Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
-	@Retention(RUNTIME)
-	@Documented
-	@interface List {
-
-		Max[] value();
-	}
 }

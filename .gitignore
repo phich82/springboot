@@ -34,3 +34,6 @@ build/
 /.history
 /.ld
 /.sonarlint
+
+### Directories ###
+logs/

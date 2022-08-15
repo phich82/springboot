@@ -12,16 +12,23 @@ import static java.lang.annotation.RetentionPolicy.*;
 /**
  * ElementType.TYPE: only apply for class level
  */
-@Constraint(validatedBy = FieldsValueMatchValidator.class)
+@Constraint(validatedBy = ExistByValidator.class)
 @Target({TYPE, ANNOTATION_TYPE})
 @Retention(RUNTIME)
 @Documented
-public @interface FieldsValueMatch {
-    public String message() default "Fields values don\'t match!";
+public @interface ExistBy {
+    public String message() default "Field value doesn't exist!";
 
-    String field();
-
-    String fieldMatch();
+    /**
+     * Form fields mapped with table columns in database
+     * Format: form_field1:table_column1,form_field2:table_column2,...
+     * If only `form_field1, form_field2`, column1=form_field1, column2=form_field2
+     */
+    String fields();
+    /**
+     * Table name
+     */
+    String table();
 
     //represents group of constraints
     public Class<?>[] groups() default {};
@@ -31,6 +38,6 @@ public @interface FieldsValueMatch {
     @Target({TYPE, ANNOTATION_TYPE})
     @Retention(RUNTIME)
     @interface List {
-        FieldsValueMatch[] value();
+        ExistBy[] value();
     }
 }

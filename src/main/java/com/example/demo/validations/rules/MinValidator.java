@@ -22,7 +22,6 @@ public class MinValidator implements ConstraintValidator<Min, Object>
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext cxt) {
         if (Arrays.asList(this.onlyfor).contains("numeric") && Helper.isNumeric(value)) {
-            System.out.println("[min]value => " + value.getClass() + " - " + value);
             return (long) value >= this.minValue;
         }
         if (value instanceof String) {
@@ -31,6 +30,6 @@ public class MinValidator implements ConstraintValidator<Min, Object>
         if (value instanceof List) {
             return ((List<?>) value).size() >= this.minValue;
         }
-        return false;
+        return value == null;
     }
 }

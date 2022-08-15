@@ -1,0 +1,553 @@
+2022-08-15 00:37:58 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 00:37:58 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username55]
+2022-08-15 00:37:58 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 00:37:58 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 00:37:58 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 00:37:58 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:06:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:06:45 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:06:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:06:45 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 01:06:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:06:45 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username55]
+2022-08-15 01:06:52 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:06:52 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [5]
+2022-08-15 01:06:58 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users
+2022-08-15 01:07:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:07:03 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username91]
+2022-08-15 01:07:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:07:03 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name91@gmail.com]
+2022-08-15 01:18:50 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:18:50 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username1]
+2022-08-15 01:18:50 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:18:50 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name1@gmail.com]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username3]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name3@gmail.com]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username3]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name3@gmail.com]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, first_name, last_name, password, phone, username) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name3@gmail.com]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [First name 3]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [Last Name 3]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [p12345678]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0123456789]
+2022-08-15 01:19:57 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [username3]
+2022-08-15 01:20:01 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users
+2022-08-15 01:20:27 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:20:27 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:20:49 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:20:49 [http-nio-8081-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [0]
+2022-08-15 01:21:12 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:21:12 [http-nio-8081-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [0]
+2022-08-15 01:21:12 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:21:12 [http-nio-8081-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name33@gmail.com]
+2022-08-15 01:21:12 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:21:12 [http-nio-8081-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username33]
+2022-08-15 01:30:27 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:30:27 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [0]
+2022-08-15 01:30:27 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:30:27 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name33@gmail.com]
+2022-08-15 01:30:27 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:30:27 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username33]
+2022-08-15 01:30:37 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:30:37 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:30:37 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:30:37 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 01:30:37 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:30:37 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username55]
+2022-08-15 01:30:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:30:51 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:30:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:30:51 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 01:30:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:30:51 [http-nio-8081-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username5]
+2022-08-15 01:31:02 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 01:31:02 [http-nio-8081-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 01:31:02 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 01:31:02 [http-nio-8081-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 01:31:02 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 01:31:02 [http-nio-8081-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username555]
+2022-08-15 01:31:12 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:12 [http-nio-8081-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [4]
+2022-08-15 01:31:24 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:24 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [40]
+2022-08-15 01:31:29 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users
+2022-08-15 01:31:47 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:47 [http-nio-8081-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [22]
+2022-08-15 01:31:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:55 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [22]
+2022-08-15 01:31:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:55 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [22]
+2022-08-15 01:31:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    DELETE 
+    FROM
+        users 
+    WHERE
+        id IN(
+            22
+        )
+2022-08-15 01:31:59 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 01:31:59 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [22]
+2022-08-15 22:24:56 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:24:56 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 22:24:56 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:24:56 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username555]
+2022-08-15 22:24:56 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:24:56 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 22:47:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:47:00 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 22:47:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:47:00 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username555]
+2022-08-15 22:47:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:47:00 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 22:56:44 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:56:44 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name55@gmail.com]
+2022-08-15 22:56:44 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:56:44 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username555]
+2022-08-15 22:56:44 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:56:44 [http-nio-8081-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 22:58:22 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:58:22 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name3@gmail.com]
+2022-08-15 22:58:22 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:58:22 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username3]
+2022-08-15 22:58:22 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:58:22 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 22:58:30 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:58:30 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name3@gmail.com]
+2022-08-15 22:58:30 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:58:30 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username3]
+2022-08-15 22:58:30 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:58:30 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 22:58:43 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 22:58:43 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name30@gmail.com]
+2022-08-15 22:58:43 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 22:58:43 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username30]
+2022-08-15 22:58:43 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 22:58:43 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 23:28:52 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 23:28:52 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]
+2022-08-15 23:28:52 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 23:28:52 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name30@gmail.com]
+2022-08-15 23:28:52 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 23:28:52 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username30]
+2022-08-15 23:55:12 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 23:55:12 [http-nio-8081-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [22]
+2022-08-15 23:55:20 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users
+2022-08-15 23:55:32 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users 
+    WHERE
+        id=?
+2022-08-15 23:55:32 [http-nio-8081-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [2]
+2022-08-15 23:56:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        email=?
+2022-08-15 23:56:29 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [name30@gmail.com]
+2022-08-15 23:56:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        username=?
+2022-08-15 23:56:29 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [username30]
+2022-08-15 23:56:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users  
+    WHERE
+        id=?
+2022-08-15 23:56:29 [http-nio-8081-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [3]

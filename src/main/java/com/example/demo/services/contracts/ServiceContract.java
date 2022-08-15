@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ServiceContract {
-    public List<?> get();
-    public Object getBy(int id);
-    // public List<Object> search(String keyword);
-    public Object store(Map<String, String> params);
-    public boolean update(int id, Map<String, String> params);
-    public boolean destroy(int id);
+    public List<?> findBy(Map<String, ?> params);
+    public Object find(Object id);
+    public Object store(Object params);
+    public boolean update(Object id, Map<String, Object> params);
+    public boolean update(Object entity);
+    public boolean destroy(Object id);
 }

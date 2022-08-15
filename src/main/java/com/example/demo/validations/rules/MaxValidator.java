@@ -30,6 +30,6 @@ public class MaxValidator implements ConstraintValidator<Max, Object>
         if (value instanceof List) {
             return ((List<?>) value).size() <= this.maxValue;
         }
-        return false;
+        return value == null;
     }
 }

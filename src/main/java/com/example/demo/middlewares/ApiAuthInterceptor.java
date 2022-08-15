@@ -17,19 +17,16 @@ public class ApiAuthInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object handler) throws Exception {
 
         // Validate authorizarion for APIs
-
-        System.out.println("getRequestURI => " + req.getRequestURI());
-        System.out.println("getQueryString => " + req.getQueryString());
-        System.out.println("getMethod => " + req.getMethod());
-
+        System.out.println("[auth][preHandle] Url => " + "/" + req.getMethod() + " " + req.getRequestURI());
+        if (req.getQueryString() != null) {
+            System.out.println("[auth][preHandle] Query string => " + req.getQueryString());
+        }
         String authHeader = req.getHeader("Authorization");
-
         if (authHeader == null) {
             Logger.info(String.format("/%s %s => %s", req.getMethod(), req.getRequestURI(), "Missing header `Authorization` key."), this);
 
             throw new BadRequestException("Missing header `Authorization` key.");
         }
-
         if (authHeader != null) {
             String[] partsAuthHeader = authHeader.split(" ");
             String authType = partsAuthHeader[0];
@@ -56,28 +53,22 @@ public class ApiAuthInterceptor implements HandlerInterceptor {
                     throw new BadRequestException("Only support authorization types: basic or bearer.");
             }
         }
-
         return true;
-        // return HandlerInterceptor.super.preHandle(request, response, handler);
     }
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        // TODO Auto-generated method stub
-        System.out.println("[postHandle] getRequestURI => " + request.getRequestURI());
-        System.out.println("[postHandle] getQueryString => " + request.getQueryString());
-        System.out.println("[postHandle] getMethod => " + request.getMethod());
+    public void postHandle(HttpServletRequest req, HttpServletResponse res, Object handler, ModelAndView modelAndView) throws Exception {
+        // Handle here
+        System.out.println("[auth][postHandle] => done");
 
-        HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
+        HandlerInterceptor.super.postHandle(req, res, handler, modelAndView);
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        // TODO Auto-generated method stub
-        System.out.println("[afterCompletion] getRequestURI => " + request.getRequestURI());
-        System.out.println("[afterCompletion] getQueryString => " + request.getQueryString());
-        System.out.println("[afterCompletion] getMethod => " + request.getMethod());
+    public void afterCompletion(HttpServletRequest req, HttpServletResponse res, Object handler, Exception e) throws Exception {
+        // Handle here
+        System.out.println("[auth][afterCompletion] => done");
 
-        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
+        HandlerInterceptor.super.afterCompletion(req, res, handler, e);
     }
 }

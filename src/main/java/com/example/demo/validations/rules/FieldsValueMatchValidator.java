@@ -1,30 +1,70 @@
 package com.example.demo.validations.rules;
 
+import javax.validation.ConstraintDeclarationException;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.BeanWrapperImpl;
 
+
 public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValueMatch, Object> {
 
     private String field;
     private String fieldMatch;
+    private String message;
 
+    /**
+     * Access properties of target annotation
+     */
+    @Override
     public void initialize(FieldsValueMatch constraintAnnotation) {
         this.field = constraintAnnotation.field();
         this.fieldMatch = constraintAnnotation.fieldMatch();
+        this.message = constraintAnnotation.message();
     }
 
+    /**
+     * Applied for class, instanceTarget is an instance of this applied class
+     */
     @Override
-    public boolean isValid(Object value, ConstraintValidatorContext context) {
+    public boolean isValid(Object instanceTarget, ConstraintValidatorContext context) {
+        Object fieldValue = null;
+        Object fieldMatchValue  = null;
+        BeanWrapperImpl instance = new BeanWrapperImpl(instanceTarget);
 
-        Object fieldValue = new BeanWrapperImpl(value).getPropertyValue(field);
-        Object fieldMatchValue = new BeanWrapperImpl(value).getPropertyValue(fieldMatch);
-
-        if (fieldValue != null) {
-            return fieldValue.equals(fieldMatchValue);
+        // Check exists property in target class
+        try {
+            fieldValue = instance.getPropertyValue(field);
+        } catch(Exception e) {
+            throw new ConstraintDeclarationException(String.format("Property `%s` not exists in %s class.", field, instanceTarget.getClass().getSimpleName()));
         }
-        return fieldMatchValue == null;
+        // Check exists property in target class
+        try {
+            fieldMatchValue = instance.getPropertyValue(fieldMatch);
+        } catch(Exception e) {
+            throw new ConstraintDeclarationException(String.format("Property `%s` not exists in %s class.", fieldMatch, instanceTarget.getClass().getSimpleName()));
+        }
+        // Check exists fields in parameters
+        if (fieldValue == null) {
+            throw new ConstraintDeclarationException(String.format("Field `%s` is missing.", field));
+        }
+        if (fieldMatchValue == null) {
+            throw new ConstraintDeclarationException(String.format("Field `%s` is missing.", fieldMatch));
+        }
+
+        boolean valid = fieldValue != null
+            ? fieldValue.equals(fieldMatchValue)
+            : fieldMatchValue == null;
+
+        // Specify the field for error message
+        if (!valid) {
+            context.buildConstraintViolationWithTemplate(this.message)
+                .addPropertyNode(this.field)
+                .addConstraintViolation()
+                .disableDefaultConstraintViolation();
+        }
+
+        return valid;
     }
 }
 

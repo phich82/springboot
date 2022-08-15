@@ -1,7 +1,40 @@
-2022-08-06 00:11:15 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 38807 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
-2022-08-06 00:11:15 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
-2022-08-06 00:11:15 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
-2022-08-06 00:11:20 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 5.887 seconds (JVM running for 7.351)
-2022-08-06 00:11:44 [http-nio-8081-exec-1] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.
-2022-08-06 00:12:04 [http-nio-8081-exec-4] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.
-2022-08-06 00:12:08 [http-nio-8081-exec-6] INFO  c.e.d.middlewares.ApiAuthInterceptor - /GET /tests => Missing header `Authorization` key.
+2022-08-15 00:37:33 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 19251 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 00:37:33 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 00:37:33 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 00:37:42 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 10.59 seconds (JVM running for 12.146)
+2022-08-15 01:06:32 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 25692 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 01:06:32 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 01:06:32 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 01:06:41 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 10.983 seconds (JVM running for 12.874)
+2022-08-15 01:18:37 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 28268 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 01:18:37 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 01:18:37 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 01:18:47 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 12.033 seconds (JVM running for 13.548)
+2022-08-15 01:30:14 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 30700 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 01:30:14 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 01:30:14 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 01:30:23 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 9.989 seconds (JVM running for 11.624)
+2022-08-15 22:24:29 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 7391 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 22:24:29 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 22:24:29 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 22:24:44 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 16.283 seconds (JVM running for 18.564)
+2022-08-15 22:46:33 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 12007 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 22:46:33 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 22:46:33 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 22:46:39 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 7.578 seconds (JVM running for 8.78)
+2022-08-15 22:56:31 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 14094 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 22:56:31 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 22:56:31 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 22:56:38 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 7.491 seconds (JVM running for 8.732)
+2022-08-15 22:57:37 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 14341 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 22:57:37 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 22:57:37 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 22:57:43 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 7.082 seconds (JVM running for 7.992)
+2022-08-15 23:28:38 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 20979 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 23:28:38 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 23:28:38 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 23:28:44 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 7.267 seconds (JVM running for 8.654)
+2022-08-15 23:54:44 [main] INFO  c.example.demo.RestfulApiApplication - Starting RestfulApiApplication using Java 14.0.1 on huynhs-Air.lan with PID 26615 (/Users/huynhphat/Desktop/web/learning/java/demo/target/classes started by huynhphat in /Users/huynhphat/Desktop/web/learning/java/demo)
+2022-08-15 23:54:44 [main] DEBUG c.example.demo.RestfulApiApplication - Running with Spring Boot v2.7.2, Spring v5.3.22
+2022-08-15 23:54:44 [main] INFO  c.example.demo.RestfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+2022-08-15 23:54:51 [main] INFO  c.example.demo.RestfulApiApplication - Started RestfulApiApplication in 7.234 seconds (JVM running for 9.247)

@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -75,6 +77,15 @@ public class CustomExceptionHandlerLombok {
         }
 
         return new ErrorResponse(errors, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(AutoValidationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse autoValidationExceptionHandler(AutoValidationException e, WebRequest req) {
+        // Log err
+
+        System.out.println("Exception => " + e);
+        return new ErrorResponse(e.errors, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
